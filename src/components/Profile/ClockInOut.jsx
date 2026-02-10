@@ -33,7 +33,7 @@ export default function ClockInOut() {
 
   const checkStatus = async () => {
     try {
-      const res = await fetch(`https://backend-controlpanel-1.onrender.com/get-attendance/${user.uid}`);
+      const res = await fetch(`https://backend-xs9b.onrender.com/get-attendance/${user.uid}`);
       const data = await res.json();
       const records = data.records || [];
 
@@ -82,7 +82,7 @@ export default function ClockInOut() {
 
   const handleClockIn = async () => {
     try {
-      const res = await fetch("https://backend-controlpanel-1.onrender.com/clock-in", {
+      const res = await fetch("https://backend-xs9b.onrender.com/clock-in", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ uid: user.uid, email: user.email }),
@@ -111,7 +111,7 @@ export default function ClockInOut() {
     }
 
     try {
-      const res = await fetch("https://backend-controlpanel-1.onrender.com/clock-out", {
+      const res = await fetch("https://backend-xs9b.onrender.com/clock-out", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ uid: user.uid, recordId: currentRecord.id }),

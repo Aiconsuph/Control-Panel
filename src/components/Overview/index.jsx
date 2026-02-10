@@ -19,7 +19,7 @@ export default function Overview() {
   useEffect(() => {
     async function loadData() {
       try {
-        const res = await fetch("https://backend-controlpanel-1.onrender.com/get-all-attendance");
+        const res = await fetch("https://backend-xs9b.onrender.com/get-all-attendance");
         const data = await res.json();
         console.log("all attendance raw:", data.records);
 

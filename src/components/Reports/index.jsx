@@ -11,7 +11,7 @@ export default function Reports() {
     try {
       setLoading(true);
       setError("");
-      const res = await fetch("https://backend-controlpanel.onrender.com/get-all-reports");
+      const res = await fetch("https://backend-xs9b.onrender.com/get-all-reports");
       const data = await res.json();
       setReports(data.records || []);
     } catch (err) {
@@ -29,7 +29,7 @@ export default function Reports() {
   const deleteReport = async (id) => {
     if (!window.confirm("Delete this report?")) return;
     try {
-      await fetch(`https://backend-controlpanel.onrender.com/delete-report/${id}`, { method: "DELETE" });
+      await fetch(`https://backend-xs9b.onrender.com/delete-report/${id}`, { method: "DELETE" });
       fetchReports();
     } catch {
       alert("Failed to delete report");

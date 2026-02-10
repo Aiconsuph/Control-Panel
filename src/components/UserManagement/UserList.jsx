@@ -14,7 +14,7 @@ export default function UserList({ refresh }) {
   const fetchUsers = async () => {
     try {
       const res = await fetch(
-        "https://backend-controlpanel-1.onrender.com/get-users"
+        "https://backend-xs9b.onrender.com/get-users"
       );
       const data = await res.json();
       setUsers(data.users);
@@ -31,7 +31,7 @@ export default function UserList({ refresh }) {
     if (confirm("Delete this user?")) {
       try {
         const res = await fetch(
-          `https://backend-controlpanel-1.onrender.com/delete-user/${uid}`,
+          `https://backend-xs9b.onrender.com/delete-user/${uid}`,
           { method: "DELETE" }
         );
         const data = await res.json();
@@ -51,7 +51,7 @@ export default function UserList({ refresh }) {
   const handleSave = async (uid) => {
     try {
       const res = await fetch(
-        `https://backend-controlpanel-1.onrender.com/update-user/${uid}`,
+        `https://backend-xs9b.onrender.com/update-user/${uid}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -72,7 +72,7 @@ export default function UserList({ refresh }) {
 
     try {
       const res = await fetch(
-        `https://backend-controlpanel-1.onrender.com/update-user/${uid}`,
+        `https://backend-xs9b.onrender.com/update-user/${uid}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

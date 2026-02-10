@@ -29,7 +29,7 @@ export default function Dashboard() {
     const fetchApproval = async () => {
       try {
         const res = await fetch(
-          `https://backend-controlpanel-1.onrender.com/get-user/${user.uid}`
+          `https://backend-xs9b.onrender.com/get-user/${user.uid}`
         );
         const data = await res.json();
         if (data.user) setApproved(data.user.approved || false);

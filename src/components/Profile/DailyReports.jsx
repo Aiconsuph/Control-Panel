@@ -58,7 +58,7 @@ const combineDateWithCurrentTime = (dateStr) => {
 
   // -------------------------- FETCH REPORTS --------------------------
   const fetchReports = async () => {
-    const res = await fetch(`https://backend-controlpanel-1.onrender.com/get-reports/${user.uid}`);
+    const res = await fetch(`https://backend-xs9b.onrender.com/get-reports/${user.uid}`);
     const data = await res.json();
     setReports(data.reports || []);
   };
@@ -75,11 +75,11 @@ const combineDateWithCurrentTime = (dateStr) => {
   : new Date();
 
     const payload = { uid: user.uid, email: user.email, report, date: reportDate.toISOString() };
-    let url = "https://backend-controlpanel-1.onrender.com/add-report";
+    let url = "https://backend-xs9b.onrender.com/add-report";
     let method = "POST";
 
     if (editingId) {
-      url = `https://backend-controlpanel-1.onrender.com/update-report/${editingId}`;
+      url = `https://backend-xs9b.onrender.com/update-report/${editingId}`;
       method = "PUT";
     }
 
@@ -107,7 +107,7 @@ const combineDateWithCurrentTime = (dateStr) => {
   // -------------------------- DELETE --------------------------
   const deleteReport = async (id) => {
     if (!confirm("Delete this report?")) return;
-    const res = await fetch(`https://backend-controlpanel-1.onrender.com/delete-report/${id}`, { method: "DELETE" });
+    const res = await fetch(`https://backend-xs9b.onrender.com/delete-report/${id}`, { method: "DELETE" });
     const data = await res.json();
     setMsg(data.message || data.error);
     fetchReports();
