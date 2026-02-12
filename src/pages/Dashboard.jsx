@@ -118,77 +118,78 @@ export default function Dashboard() {
         <section className="content">{renderContent()}</section>
       </main>
 
-      <style>{`
-        body {
-          margin: 0;
-          min-height: 100vh;
-          background-image: url("/bg_AiconImage.jpg");
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-        }
+  <style>{`
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2a0a1f, #3d0f2c, #4c1136);
+    background-attachment: fixed;
+  }
 
-        .dashboard-wrapper {
-          display: flex;
-          width: 100vw;
-          min-height: 100vh;
-          color: #f9fafb;
-        }
+  .dashboard-wrapper {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    color: #ffe4f1;
+  }
 
-        .overlay {
-          position: fixed;
-          inset: 0;
-          background: rgba(0,0,0,0.5);
-          z-index: 9;
-        }
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9;
+  }
 
-        .main-area {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          padding: 20px;
-        }
+  .main-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
 
-        .header {
-          border-bottom: 1px solid #1e293b;
-          margin-bottom: 20px;
-        }
+  .header {
+    border-bottom: 1px solid #ff69b4;
+    margin-bottom: 20px;
+  }
 
-        h1 {
-          color: #facc15;
-          margin: 0 0 5px;
-        }
+  h1 {
+    color: #ff4da6; /* Bright pink heading */
+    margin: 0 0 5px;
+  }
 
-        .content {
-          flex: 1;
-          padding: 20px;
-          border-radius: 10px;
-        }
+  .content {
+    flex: 1;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 20, 147, 0.08);
+    backdrop-filter: blur(6px);
+  }
 
-        .hamburger {
-          display: none;
-        }
+  .hamburger {
+    display: none;
+  }
 
-        @media (max-width: 900px) {
-          .hamburger {
-            display: block;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 10;
-            background: #1e293b;
-            border: 1px solid #334155;
-            padding: 8px 12px;
-            border-radius: 6px;
-            color: white;
-          }
+  @media (max-width: 900px) {
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      z-index: 10;
+      background: #ff4da6;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+    }
 
-          .main-area {
-            padding-top: 55px;
-          }
-        }
-      `}</style>
+    .main-area {
+      padding-top: 55px;
+    }
+  }
+`}</style>
+
     </div>
   );
 }
