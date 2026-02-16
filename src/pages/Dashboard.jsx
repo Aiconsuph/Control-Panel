@@ -1,4 +1,5 @@
 // src/pages/Dashboard.jsx
+import bg from "../assets/bg.jpg";
 import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
@@ -122,7 +123,10 @@ export default function Dashboard() {
   body {
     margin: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #2a0a1f, #3d0f2c, #4c1136);
+    background-image: url(${bg});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
   }
 
@@ -130,13 +134,13 @@ export default function Dashboard() {
     display: flex;
     width: 100vw;
     min-height: 100vh;
-    color: #ffe4f1;
+    color: #ffffff;
   }
 
   .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(245, 28, 28, 0);
     z-index: 9;
   }
 
@@ -148,12 +152,12 @@ export default function Dashboard() {
   }
 
   .header {
-    border-bottom: 1px solid #ff69b4;
+    border-bottom: 1px solid #ffff00;
     margin-bottom: 20px;
   }
 
   h1 {
-    color: #ff4da6; /* Bright pink heading */
+    color: #f7de00;
     margin: 0 0 5px;
   }
 
@@ -161,7 +165,7 @@ export default function Dashboard() {
     flex: 1;
     padding: 20px;
     border-radius: 12px;
-    background: rgba(255, 20, 147, 0.08);
+    background: rgba(7, 0, 4, 0.08);
     backdrop-filter: blur(6px);
   }
 
@@ -176,7 +180,7 @@ export default function Dashboard() {
       top: 15px;
       left: 15px;
       z-index: 10;
-      background: #ff4da6;
+      background: #645f00;
       border: none;
       padding: 8px 12px;
       border-radius: 6px;
@@ -189,6 +193,8 @@ export default function Dashboard() {
     }
   }
 `}</style>
+
+
 
     </div>
   );
